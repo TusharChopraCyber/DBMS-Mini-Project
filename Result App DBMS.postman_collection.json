@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "7ebe0b00-24fa-4a30-8b1d-f39db45ba9c8",
+		"name": "Result App DBMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37844047"
+	},
+	"item": [
+		{
+			"name": "Admin Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin123\",\r\n    \"admin_key\": \"result_admin\",\r\n    \"email\": \"admin@exam.du.ac.in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Result",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMTg1MDc2MSwianRpIjoiMWVkMjFjNTctY2Y2Ny00ZDIxLTgyYmItZmQxYWZlODc4NzJiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMxODUwNzYxLCJjc3JmIjoiMzE0MmQwYWUtMWNlZC00ZTg5LWE1MzMtOTI0NzJjMmM4NzViIiwiZXhwIjoxNzMxODU0MzYxfQ.fmFzN1y-HI3xePhLE5ii7PYaLxchG9EA3NkFo-CORdg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exam_roll_no\": 23293916141,\r\n    \"student_name\": \"Tushar Chopra\",\r\n    \"marks\": 99.9,\r\n    \"grade\": \"A+\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/results",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"tushar\",\r\n    \"password\": \"tushar\",\r\n    \"exam_roll_no\": 23293916141,\r\n    \"email\": \"tushar@ce.du.ac.in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"tushar\",\r\n    \"password\": \"tushar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Result",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMTg1MTAzMiwianRpIjoiMDQ1NWU5ZTQtNzRjMC00Mjg5LTliM2UtM2QyYzk5MTdhZDM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzMxODUxMDMyLCJjc3JmIjoiMmMzOTI2NWItZTA5YS00YzEzLWFmMmMtYWVmZTQwZjVjOGE0IiwiZXhwIjoxNzMxODU0NjMyfQ.jHR6tnG-vUkw2ylg_FhbnoZ_vYi9ardKJSTIP9rWrbM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/results/{{exam_roll_no}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"results",
+						"{{exam_roll_no}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DU Email Check",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"arsh\",\r\n    \"password\": \"arsh\",\r\n    \"exam_roll_no\": 23293916140,\r\n    \"email\": \"arsh@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
